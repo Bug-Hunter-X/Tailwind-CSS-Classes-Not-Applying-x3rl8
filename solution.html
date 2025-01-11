@@ -1,0 +1,11 @@
+The problem was caused by an incorrect configuration of PurgeCSS in my `tailwind.config.js` file.  The `content` array was missing the paths to the templates where I used Tailwind classes.  I added the correct path to fix the issue.  Here's the corrected config:
+
+```javascript
+module.exports = {
+  purge: [
+    './src/**/*.html',
+  ],
+  // ... rest of your Tailwind config
+}
+```
+Adding the correct file path(s) to the PurgeCSS `content` array ensures that all necessary CSS rules are retained.  The HTML file remained unchanged, as the classes themselves were already correctly written.  The problem was entirely with the configuration of PurgeCSS.
