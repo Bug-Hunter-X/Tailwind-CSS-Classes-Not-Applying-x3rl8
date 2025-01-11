@@ -1,0 +1,3 @@
+This repository demonstrates a bug where Tailwind CSS classes fail to apply to HTML elements. The problem occurs despite correct configuration and syntax. The `bug.html` file shows the initial code with the issue, and `solution.html` provides the corrected code.
+
+The issue was resolved by ensuring that the PurgeCSS configuration in `tailwind.config.js` was properly configured to include all necessary template paths.  Incorrect configuration can cause PurgeCSS to remove unused CSS classes, leading to the apparent failure of Tailwind classes to apply.
